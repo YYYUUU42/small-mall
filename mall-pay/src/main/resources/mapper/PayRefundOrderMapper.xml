@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yu.mall.pay.mapper.PayRefundOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.yu.mall.pay.model.entity.PayRefundOrder">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="bizOrderNo" column="biz_order_no" jdbcType="BIGINT"/>
+            <result property="bizRefundOrderNo" column="biz_refund_order_no" jdbcType="BIGINT"/>
+            <result property="payOrderNo" column="pay_order_no" jdbcType="BIGINT"/>
+            <result property="refundOrderNo" column="refund_order_no" jdbcType="BIGINT"/>
+            <result property="refundAmount" column="refund_amount" jdbcType="INTEGER"/>
+            <result property="totalAmount" column="total_amount" jdbcType="INTEGER"/>
+            <result property="isSplit" column="is_split" jdbcType="BIT"/>
+            <result property="payChannelCode" column="pay_channel_code" jdbcType="VARCHAR"/>
+            <result property="resultCode" column="result_code" jdbcType="VARCHAR"/>
+            <result property="resultMsg" column="result_msg" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="refundChannel" column="refund_channel" jdbcType="VARCHAR"/>
+            <result property="notifyFailedTimes" column="notify_failed_times" jdbcType="INTEGER"/>
+            <result property="notifyStatus" column="notify_status" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="creater" column="creater" jdbcType="BIGINT"/>
+            <result property="updater" column="updater" jdbcType="BIGINT"/>
+            <result property="deleted" column="deleted" jdbcType="BIT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,biz_order_no,biz_refund_order_no,
+        pay_order_no,refund_order_no,refund_amount,
+        total_amount,is_split,pay_channel_code,
+        result_code,result_msg,status,
+        refund_channel,notify_failed_times,notify_status,
+        create_time,update_time,creater,
+        updater,deleted
+    </sql>
+</mapper>
